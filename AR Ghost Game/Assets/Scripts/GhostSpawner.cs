@@ -1,50 +1,78 @@
 using UnityEngine;
-using UnityEngine.XR.ARFoundation;
-using UnityEngine.XR.ARSubsystems;
-using System.Collections.Generic;
 
 public class GhostSpawner : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject ghostPrefab;
-
-    [SerializeField]
-    private ARRaycastManager raycastManager;
-
-    [SerializeField]
-    private float spawnRadius = 3f;
-
-    [SerializeField]
-    private int ghostCount = 5;
-
-    private List<ARRaycastHit> hits = new List<ARRaycastHit>();
-
+    [Header("Ghost Settings")]
+    public GameObject ghostPrefab;
+    public float spawnDistance = 5f;
+    public float spawnHeight = 1f;
+    
+    [Header("Ghost Rotation")]
+    [Tooltip("Rotation in degrees. X = -90 makes the ghost stand upright.")]
+    private readonly Vector3 ghostRotationOffset = new Vector3(-90f, 0f, 0f);
+    
+    [Header("Game Stats")]
+    [Tooltip("Number of ghosts killed in the current game session")]
+    public int ghostsKilled = 0;
+    
+    private GameObject currentGhost;
+    
     void Start()
     {
-        for(int i = 0; i < ghostCount; i++)
-        {
-            SpawnGhost();
-        }
+        // Spawn the first ghost
+        SpawnGhost();
     }
-
-    private void SpawnGhost()
+    
+    void SpawnGhost()
     {
-        // Determine random spawn offset around player
-        float angle = Random.Range(0f, 360f);
-        Vector3 offset = new Vector3(Mathf.Cos(angle * Mathf.Deg2Rad), 0f, Mathf.Sin(angle * Mathf.Deg2Rad)) * spawnRadius;
-
-        Vector3 spawnOrigin = Camera.main.transform.position + offset + Vector3.up * 1.5f;
-
-        // Raycast downward to find a plane
-        if (raycastManager.Raycast(spawnOrigin, hits, TrackableType.PlaneWithinBounds | TrackableType.PlaneWithinPolygon))
+        // Generate random direction (360 degrees around origin)
+        float randomAngle = Random.Range(0f, 360f) * Mathf.Deg2Rad;
+        
+        // Calculate spawn position: 5m away from origin, 1m in the air, random direction
+        Vector3 spawnPosition = new Vector3(
+            Mathf.Cos(randomAngle) * spawnDistance,
+            spawnHeight,
+            Mathf.Sin(randomAngle) * spawnDistance
+        );
+        
+        // Create rotation with -90 degrees on X axis to make ghost stand upright
+        Quaternion ghostRotation = Quaternion.Euler(ghostRotationOffset);
+        
+        // Spawn the ghost with the rotation
+        currentGhost = Instantiate(ghostPrefab, spawnPosition, ghostRotation);
+        
+        // Ensure the rotation is applied correctly by forcing it
+        if (currentGhost != null)
         {
-            var hitPose = hits[0].pose;
-            Instantiate(ghostPrefab, hitPose.position, Quaternion.identity);
+            currentGhost.transform.rotation = ghostRotation;
         }
-        else
-        {
-            // fallback: spawn at offset position anyway
-            Instantiate(ghostPrefab, spawnOrigin, Quaternion.identity);
-        }
+        
+        Debug.Log($"Ghost spawned at: {spawnPosition}");
+    }
+    
+    public void OnGhostShot()
+    {
+        // Called when a ghost is shot
+        currentGhost = null;
+        
+        // Spawn a new ghost after a short delay
+        Invoke(nameof(SpawnGhost), 0.5f);
+    }
+    
+    public void IncrementKillCount()
+    {
+        ghostsKilled++;
+        Debug.Log($"Ghost killed! Total kills: {ghostsKilled}");
+    }
+    
+    public int GetKillCount()
+    {
+        return ghostsKilled;
+    }
+    
+    public void ResetKillCount()
+    {
+        ghostsKilled = 0;
+        Debug.Log("Kill count reset to 0");
     }
 }
