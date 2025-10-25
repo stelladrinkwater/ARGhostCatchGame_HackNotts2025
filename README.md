@@ -1,9 +1,8 @@
-# AR Ghost Game
+# AR Ghost Catching Game
 
 👻
 
-[Google Android AR Dev Guide](https://developers.google.com/ar/develop/java/quickstart)
-
+https://github.com/user-attachments/assets/9f103d6f-acd0-4abf-9d0e-3c4ebcfe3491
 
 ## Potential Unity Development Notes
 
@@ -17,6 +16,7 @@ Add these modules to your Unity installation through Unity Hub:
 This template may be useful:
 ![Screenshot 2025-10-25 at 12 54 21 PM](https://github.com/user-attachments/assets/e455b192-1698-447d-94e5-ca27fefda2ed)
 
-## Assets
+## Resources
 
-[Low Poly Ghosts](https://assetstore.unity.com/packages/3d/characters/little-ghost-lowpoly-free-271926)
+
+[Google Android AR Dev Guide](https://developers.google.com/ar/develop/java/quickstart)
