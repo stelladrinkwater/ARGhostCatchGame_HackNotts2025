@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: AR Ghost Game
+  productName: ARCompanionAR Ghost Game
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.14509805, g: 0.10196079, b: 0.1254902, a: 1}
@@ -147,6 +147,10 @@ PlayerSettings:
   bundleVersion: 0.1
   preloadedAssets:
   - {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
+  - {fileID: -8903589724194090484, guid: edf96152a0124f3449819b2e216a0e98, type: 2}
+  - {fileID: 11400000, guid: 367a60cb73b676445a080d4221a84a6f, type: 2}
+  - {fileID: 4800000, guid: c9f956787b1d945e7b36e0516201fc76, type: 3}
+  - {fileID: 4800000, guid: 0945859e5a1034c2cb6dce53cb4fb899, type: 3}
   - {fileID: 11400000, guid: 527322bb737d00840ab8f123c26c0aef, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -169,7 +173,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.4
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Android: com.mattermatter.arghostgame
+    Android: com.mattermatter.arghostgameARCompanion
     Standalone: com.DefaultCompany.3D-Project
   buildNumber:
     Standalone: 0
@@ -856,7 +860,8 @@ PlayerSettings:
   webGLWebAssemblyBigInt: 0
   webGLCloseOnQuit: 0
   webWasm2023: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Android: AR_COMPANION
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
