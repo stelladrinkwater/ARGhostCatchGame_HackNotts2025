@@ -15,3 +15,7 @@ Add these modules to your Unity installation through Unity Hub:
 
 This template may be useful:
 ![Screenshot 2025-10-25 at 12 54 21 PM](https://github.com/user-attachments/assets/e455b192-1698-447d-94e5-ca27fefda2ed)
+
+## Assets
+
+[Low Poly Ghosts](https://assetstore.unity.com/packages/3d/characters/little-ghost-lowpoly-free-271926)
