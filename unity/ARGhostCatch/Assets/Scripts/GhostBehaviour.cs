@@ -10,11 +10,8 @@ public class GhostBehaviour : MonoBehaviour
     public float bobbingHeight = 0.5f;
     
     [Header("Rotation Settings")]
-    [Tooltip("Speed of ghost rotation")]
+    [Tooltip("Speed of ghost rotation (Y-axis only to prevent backflips)")]
     public float rotationSpeed = 30f;
-    
-    [Tooltip("Rotation axis for the ghost")]
-    public Vector3 rotationAxis = new Vector3(0, 1, 0);
     
     [Header("Physical Anchoring")]
     [Tooltip("The ghost will stay anchored to this physical world position")]
@@ -58,8 +55,8 @@ public class GhostBehaviour : MonoBehaviour
     
     void PerformRotation()
     {
-        // Rotate the ghost around the specified axis
-        transform.Rotate(rotationAxis * rotationSpeed * Time.deltaTime);
+        // Only rotate around Y-axis to prevent backflips
+        transform.Rotate(0, rotationSpeed * Time.deltaTime, 0, Space.World);
     }
     
     void OnTriggerEnter(Collider other)

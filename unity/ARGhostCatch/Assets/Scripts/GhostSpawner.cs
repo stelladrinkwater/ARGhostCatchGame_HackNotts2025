@@ -11,6 +11,10 @@ public class GhostSpawner : MonoBehaviour
     [Tooltip("Rotation in degrees. X = -90 makes the ghost stand upright.")]
     private readonly Vector3 ghostRotationOffset = new Vector3(-90f, 0f, 0f);
     
+    [Header("Game Stats")]
+    [Tooltip("Number of ghosts killed in the current game session")]
+    public int ghostsKilled = 0;
+    
     private GameObject currentGhost;
     
     void Start()
@@ -53,5 +57,22 @@ public class GhostSpawner : MonoBehaviour
         
         // Spawn a new ghost after a short delay
         Invoke(nameof(SpawnGhost), 0.5f);
+    }
+    
+    public void IncrementKillCount()
+    {
+        ghostsKilled++;
+        Debug.Log($"Ghost killed! Total kills: {ghostsKilled}");
+    }
+    
+    public int GetKillCount()
+    {
+        return ghostsKilled;
+    }
+    
+    public void ResetKillCount()
+    {
+        ghostsKilled = 0;
+        Debug.Log("Kill count reset to 0");
     }
 }
