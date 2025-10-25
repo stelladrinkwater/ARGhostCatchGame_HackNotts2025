@@ -8,6 +8,7 @@
 ## Potential Unity Development Notes
 
 [Unity Mobile AR Dev Guide](https://learn.unity.com/pathway/mobile-ar-development/unit/get-started-with-ar/tutorial/configure-your-ar-development-environment)
+[Deployment Guide](https://learn.unity.com/pathway/mobile-ar-development/unit/get-started-with-ar/tutorial/deploy-your-project-to-ios-or-android?version=2022.3)
 
 Add these modules to your Unity installation through Unity Hub:
 ![add modules](https://github.com/user-attachments/assets/e10d7b61-cbb8-45fa-a69b-7029cd255a58)
