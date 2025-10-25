@@ -2,8 +2,6 @@
 
 👻
 
-https://github.com/user-attachments/assets/9f103d6f-acd0-4abf-9d0e-3c4ebcfe3491
-
 ## Potential Unity Development Notes
 
 [Unity Mobile AR Dev Guide](https://learn.unity.com/pathway/mobile-ar-development/unit/get-started-with-ar/tutorial/configure-your-ar-development-environment)
@@ -15,6 +13,10 @@ Add these modules to your Unity installation through Unity Hub:
 
 This template may be useful:
 ![Screenshot 2025-10-25 at 12 54 21 PM](https://github.com/user-attachments/assets/e455b192-1698-447d-94e5-ca27fefda2ed)
+
+## Video (Solo Demo)
+
+https://github.com/user-attachments/assets/9f103d6f-acd0-4abf-9d0e-3c4ebcfe3491
 
 ## Resources
 
