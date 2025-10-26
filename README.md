@@ -20,3 +20,6 @@ Then, we ran into real trouble with the *Cloud Anchors* that synchronize the AR 
 
 At some point yesterday, after reaching an impasse vis-à-vis co-op implementation, the project scope became single-player.
 
+## What We Achieved
+
+Despite the twists and turns, we shipped a playable AR ghost-catching prototype for iOS. A player can scan their space, reveal a ghost, and fling a line trace at it. We learned a ton about AR mobile development, and the pros and cons of different game engines and frameworks that we tried along the way.
