@@ -1,5 +1,7 @@
 # AR Ghost Catching Game
 
+https://github.com/user-attachments/assets/9f103d6f-acd0-4abf-9d0e-3c4ebcfe3491
+
 ## Inspiration
 
 Our core inspiration sources were the Wii game **Spooky Search** and the Steel Crate Games’ co-op puzzle game **Keep Talking and Nobody Explodes**. We wanted to incorporate the ghost catching element of the former, and the element of verbal communication of privileged knowledge in the latter, and use mobile AR technology.
@@ -18,7 +20,3 @@ Then, we ran into real trouble with the *Cloud Anchors* that synchronize the AR 
 
 At some point yesterday, after reaching an impasse vis-à-vis co-op implementation, the project scope became single-player.
 
-
-https://github.com/user-attachments/assets/9f103d6f-acd0-4abf-9d0e-3c4ebcfe3491
-
-👻
