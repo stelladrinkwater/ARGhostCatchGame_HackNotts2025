@@ -29,5 +29,6 @@ At some point yesterday, after reaching an impasse vis-à-vis co-op implementati
 Despite the twists and turns, we shipped a playable AR ghost-catching prototype for iOS. A player can scan their space, reveal a ghost, and fling a line trace at it. The collision detection and randomization of ghost location works. We learned a ton about AR mobile development, and the pros and cons of different game engines and frameworks that we tried along the way.
 
 ## What's Next?
-* Adaptive original music
-* Multiplayer support
+[ ] Adaptive original music
+[ ] Multiplayer support
+[ ] Haptic feedback
