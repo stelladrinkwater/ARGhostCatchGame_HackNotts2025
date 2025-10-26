@@ -12,7 +12,6 @@ Our initial idea was to have a multiplayer ghost finding game, where there is on
 
 * The Seer *can* see the ghosts with their phone, and the Catcher *can’t*
 * The Seer tells the Catcher where to aim
-* **Haptic feedback** for the Catcher so they know when they're getting warmer
 
 ## How It Went
 
