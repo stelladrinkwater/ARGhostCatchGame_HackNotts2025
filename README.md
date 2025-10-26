@@ -8,7 +8,11 @@ Our core inspiration sources were the Wii game **Spooky Search** and the Steel C
 
 ## What We Set Out To Do
 
-Our initial idea was to have a multiplayer ghost finding game, where there is one “Seer” and one “Catcher”. The Seer can see the ghosts with their phone, and the Catcher can’t. The Seer has to tell the Catcher where to aim. 
+Our initial idea was to have a multiplayer ghost finding game, where there is one “Seer” and one “Catcher”. 
+
+* The Seer can see the ghosts with their phone, and the Catcher can’t
+* The Seer has tells the Catcher where to aim
+* Haptic feedback for the Catcher so they know when they're getting warmer
 
 ## How It Went
 
